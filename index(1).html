@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartbeat Animation</title>
+    <style>
+        /* Body styling */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffd1dc, #ff9fcb); /* Gradient pink background */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for button */
+        .button-container {
+            background: white;
+            padding: 20px 40px; /* Padding around the button */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            text-align: center;
+            animation: heartbeat 1.5s infinite; /* Heartbeat animation */
+        }
+
+        /* Start button styling */
+        .start-button {
+            width: 300px; /* Fixed width for the button */
+            padding: 15px 0; /* Adjusted padding for better alignment */
+            font-size: 18px;
+            color: white;
+            background-color: #ff4081; /* Bright pink */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Heartbeat animation keyframes */
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+            
+        }
+        @media (max-width: 600px) {
+            .section {
+                padding: 20px;
+            }
+
+            .section h1 {
+                font-size: 20px;
+            }
+
+            .section button {
+                font-size: 16px;
+            }
+            .start-button{
+                width: 200px   ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a style= "text-decoration: none; color: white;" href="final.html"><button class="start-button">Start</button></a>
+    </div>
+</body>
+</html>

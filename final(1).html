@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd1dc, #ff9fcb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .section {
+            display: none;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section button, .section .buttons .button {
+            padding: 15px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section button:hover, .section .buttons .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Media Query for Responsive Design */
+        @media (max-width: 600px) {
+            .section {
+                padding: 20px;
+            }
+
+            .section h1 {
+                font-size: 20px;
+            }
+
+            .section button {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
+        function navigateToSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Hey Section -->
+    <div class="section active" id="hey">
+        <h1>Hey 🙋‍♂️ sakshiii!</h1>
+        <button onclick="navigateToSection('will')">Click here to know a secret 😌</button>
+    </div>
+
+    <!-- Will Section -->
+    <div class="section" id="will">
+        <h1>Will you tell anyone? 🙈</h1>
+        <button onclick="navigateToSection('promise')">No, I won't :0</button>
+    </div>
+
+    <!-- Promise Section -->
+    <div class="section" id="promise">
+        <h1>Promise? 🙂‍↔️</h1>
+        <button onclick="navigateToSection('trust')">Promise!</button>
+    </div>
+
+    <!-- Trust Section -->
+    <div class="section" id="trust">
+        <h1>Okay, I trust you 😄</h1>
+        <button onclick="navigateToSection('coffee')">Click here to unlock the secret 🔓</button>
+    </div>
+
+    <!-- Coffee Section -->
+    <div class="section" id="coffee">
+        <h1>Secret?</h1>
+        <p>kya AAP mujhse naraz nahi ho ?😕 </p>
+        <div class="buttons">
+            <button class="button yes" onclick="navigateToSection('sorry')">Yes!</button>
+            <button class="button no" onclick="alert('pliz sorry🙃 ')">No</button>
+        </div>
+    </div>
+
+    <!-- Sorry Section -->
+    <div class="section" id="sorry">
+        <h1>Okay, Sorry😊🙇‍♂️</h1>
+        <a style= "text-decoration: none; color: white;" href="christmas.html">
+            <button>Here is a gift for you!</button>
+        </a>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="videoplayback (online-audio-converter.com).mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

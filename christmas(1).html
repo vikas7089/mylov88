@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video controls autoplay loop>
+        <source src="videoplayback.mp4" type="video/mp4">
+        
+    </video>
+    
+    <audio id="background-music" 
+       preload="auto" 
+       src="videoplayback (online-audio-converter.com).mp3#t=00:00:37" 
+       oncanplaythrough="this.play();">
+</audio>
+</body>
+</html>
